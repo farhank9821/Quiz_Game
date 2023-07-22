@@ -78,9 +78,12 @@ class _MyappState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: new ThemeData(scaffoldBackgroundColor: const Color(0XFFF2EE9D)),
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: const Text('Quiz App'),
+          backgroundColor: Colors.amber,
         ),
         body: _questionIndex < _questions.length
             ? Quiz(

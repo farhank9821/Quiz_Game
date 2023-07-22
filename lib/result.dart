@@ -14,7 +14,7 @@ class Result extends StatelessWidget {
     } else if (resultScore <= 10) {
       resultText = 'Pretty likeable';
     } else {
-      resultText = 'Decent choice..';
+      resultText = 'Decent choice.';
     }
 
     return resultText;
@@ -24,10 +24,13 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(children: <Widget>[
-        Text(
-          resultPhase,
-          style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
+        Container(
+          padding: const EdgeInsets.only(top: 300),
+          child: Text(
+            resultPhase,
+            style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
         ),
         TextButton(onPressed: resetHandler, child: Text('Restart Quiz'))
       ]),
